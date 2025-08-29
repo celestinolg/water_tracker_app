@@ -14,8 +14,8 @@ class SplashScreen extends StatelessWidget {
             Center(
               child: Lottie.asset(
                 'assets/animation/splash.json',
-                width: 500,
-                height: 500,
+                width: 200,
+                height: 200,
               ),
             ),
             Positioned(
@@ -24,8 +24,9 @@ class SplashScreen extends StatelessWidget {
               right: 0,
               child: Center(
                 child: Text(
-                  'Water Tracker',
+                  'Drops Water Tracker',
                   style: TextStyle(
+                    fontFamily: 'Poppins',
                     color: Colors.white,
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
