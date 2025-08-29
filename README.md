@@ -22,6 +22,7 @@ Destaques do design:
 
 🔗 [Aceder ao design no Figma](https://www.figma.com/design/3omH9msOSGpBjOg2bQuD4T/Water-Tracker-App-%7C-Water-Drink-Reminder-App-%7C-UI-Design--Community-?node-id=0-1&p=f)  
 
+- @uiux_expert (instagram)
 ---
 
 ## Sobre o Projecto  
