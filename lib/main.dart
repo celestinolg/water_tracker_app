@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:water_tracker/feature/onboard/onboard_screen.dart';
 import 'package:water_tracker/feature/splash/splash_screen.dart';
 
 void main() {
@@ -15,7 +16,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       initialRoute: '/',
-      routes: {'/': (context) => const SplashScreen()},
+      routes: {
+        '/': (context) => const SplashScreen(),
+        '/onboard': (context) => OnboardScreen(),
+      },
     );
   }
 }

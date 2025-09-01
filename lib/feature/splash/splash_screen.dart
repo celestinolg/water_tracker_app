@@ -1,41 +1,75 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 5), () {
+      Navigator.pushReplacementNamed(context, '/onboard');
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF5DCCFC),
-      body: SafeArea(
-        child: Stack(
-          children: [
-            Center(
-              child: Lottie.asset(
-                'assets/animation/splash.json',
-                width: 200,
-                height: 200,
-              ),
-            ),
-            Positioned(
-              bottom: 20,
-              left: 0,
-              right: 0,
-              child: Center(
-                child: Text(
-                  'Drops Water Tracker',
+      body: Stack(
+        children: [
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset('assets/img/icon.png'),
+                const Text(
+                  'Monitor de consumo de água',
                   style: TextStyle(
                     fontFamily: 'Poppins',
-                    color: Colors.white,
                     fontSize: 24,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white,
                   ),
                 ),
-              ),
+                const Text(
+                  'Mantenha-se hidratado e controle a sua\n ingestão diária de água',
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
+                    fontSize: 14,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w300,
+                  ),
+                  textAlign: TextAlign.center,
+                  maxLines: 3,
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+
+          Container(
+            margin: const EdgeInsets.only(top: 20, left: 20, right: 20),
+            child: Column(children: [
+                
+              ],
+            ),
+          ),
+          Positioned(
+            bottom: 0,
+            left: 0,
+            child: Lottie.asset(
+              'assets/animation/Waves.json',
+              height: 300,
+              fit: BoxFit.cover,
+              width: MediaQuery.of(context).size.width,
+            ),
+          ),
+        ],
       ),
     );
   }
