@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:water_tracker/feature/home/home_screen.dart';
 import 'package:water_tracker/feature/onboard/onboard_screen.dart';
 import 'package:water_tracker/feature/splash/splash_screen.dart';
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const SplashScreen(),
         '/onboard': (context) => OnboardScreen(),
+        '/home': (context) => HomeScreen(),
       },
     );
   }
