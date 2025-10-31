@@ -25,7 +25,7 @@ class _OnboardScreenState extends State<OnboardScreen> {
     },
     {
       'image': 'assets/img/onboard_3.png',
-      'title': 'Fácil de usar – Beba, toque, repita.',
+      'title': 'Fácil de usar.\nBeba, toque, repita.',
       'subtitle':
           'Manter-se hidratado todos os dias é fácil com o Drops Water Tracker.',
     },
@@ -77,7 +77,7 @@ class _OnboardScreenState extends State<OnboardScreen> {
               },
               itemBuilder: (_, index) {
                 return Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  //mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Image.asset(
@@ -138,8 +138,8 @@ class _OnboardScreenState extends State<OnboardScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 40),
 
+                  SizedBox(height: 40),
                   primaryButton(
                     text: (_currentPage == onBoardList.length - 1)
                         ? 'Começar'

@@ -20,51 +20,44 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF5DCCFC),
+      backgroundColor: const Color(0xFF5DCCFC),
       body: Stack(
         children: [
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset('assets/img/icon.png'),
-                const Text(
-                  'Monitor de consumo de água',
-                  style: TextStyle(
-                    fontFamily: 'Poppins',
-                    fontSize: 24,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.white,
-                  ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset('assets/img/icon.png'),
+              const Text(
+                'Monitor de consumo de água',
+                style: TextStyle(
+                  fontFamily: 'Poppins',
+                  fontSize: 24,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.white,
                 ),
-                const Text(
-                  'Mantenha-se hidratado e controle a sua\n ingestão diária de água',
-                  style: TextStyle(
-                    fontFamily: 'Poppins',
-                    fontSize: 14,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w300,
-                  ),
-                  textAlign: TextAlign.center,
-                  maxLines: 3,
+                maxLines: 2,
+                textAlign: TextAlign.center,
+              ),
+              const Text(
+                'Mantenha-se hidratado e controle a sua\n ingestão diária de água',
+                style: TextStyle(
+                  fontFamily: 'Poppins',
+                  fontSize: 14,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w300,
                 ),
-              ],
-            ),
+                textAlign: TextAlign.center,
+                maxLines: 3,
+              ),
+            ],
           ),
 
-          Container(
-            margin: const EdgeInsets.only(top: 20, left: 20, right: 20),
-            child: Column(children: [
-                
-              ],
-            ),
-          ),
           Positioned(
             bottom: 0,
             left: 0,
             child: Lottie.asset(
               'assets/animation/Waves.json',
-              height: 300,
+              height: 250,
               fit: BoxFit.cover,
               width: MediaQuery.of(context).size.width,
             ),

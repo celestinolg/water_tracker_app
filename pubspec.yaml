@@ -77,9 +77,10 @@ flutter:
   # example:
   fonts:
     - family: Poppins
-    - fonts:
-      - asset: assets/fonts/Poppins/Poppins-Regular.ttf
-      - asset: assets/fonts/Poppins/Poppins-Bold.ttf
+      fonts:
+        - asset: assets/fonts/Poppins/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins/Poppins-Bold.ttf
+          weight: 700
 
   #
   # For details regarding fonts from package dependencies,
